@@ -1,0 +1,324 @@
+/***** reset *****/
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    text-decoration: none; 
+    list-style: none; 
+}
+
+/***** général *****/
+body {
+    font-size: 16px; 
+    line-height: 1.5em; 
+    font-family: 'BenchNine', sans-serif; 
+    color: #000; 
+}
+
+.main-content, .planning, .adresse,
+.portfolio, .semaine {
+    background-color: #fff; 
+    border: 2px solid #ededed; 
+    box-shadow: 1px 1px 2px #ededed; 
+}
+
+h2 {
+    background-color: #ae2123; 
+    padding: 0.25em 1.5em; 
+    margin-bottom: 0.75em; 
+    width: fit-content; 
+    color: #fff; 
+    font-weight: normal; 
+    font-size: 1.75em; 
+}
+
+p {
+    font-size: 1.25em; 
+}
+
+.title {
+    font-weight: bolder;
+    font-size: 2em;
+    padding-top: 0.5em;
+}
+
+/***** header *****/
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-header {
+    width: 30%;
+    margin-top: 0.5em;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: 'Chela One', sans-serif;
+    color: #527bea;
+    margin: 0.5em 0 1em;
+}
+
+/***** navbar *****/
+nav {
+    background-color: #ae2123; 
+}
+
+.main-nav a {
+    display: block;
+    color: #fff;
+    margin: .325em 0 0 .75em;
+}
+
+.main-nav a:hover {
+    color: #999;
+}
+
+.menu-search {
+    width: 45%;
+    height: 1.5em;
+    font-family: 'BenchNine', sans-serif;
+    border: 1px solid #ededed;
+    border-radius: 45px;
+    padding: 0.5em;
+    margin: 0.5em 0.25em 0.5em 0.5em;
+    height: 1.5em;
+    font-size: 0.75em;
+}
+
+/***** main *****/
+#wrapper { 
+    max-width: 1850px;
+    margin: 0 auto; 
+    display: grid; 
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "adresse"
+        "planning"
+        "portfolio"
+        "semaine"
+        "footer";
+}
+
+.main-header {
+    grid-area: header; 
+}
+.main-nav {
+    grid-area: nav; 
+}
+.main-content {
+    grid-area: main; 
+}
+.planning {
+    grid-area: planning; 
+}
+.adresse {
+    grid-area: adresse; 
+}
+.portfolio {
+    grid-area: portfolio; 
+}
+.semaine {
+    grid-area: semaine; 
+}
+.main-footer {
+    grid-area: footer; 
+}
+
+.suite {
+    color: #ae2123; 
+}
+
+article, section {
+    padding: 0.75em 0.5em;
+    margin: 0.25em 0.25em 0.75em 0.25em;
+}
+
+.blue, .reserve, .command {
+    background-color: #527bea; 
+    color: #fff; 
+}
+
+.grey {
+    background-color: #858585; 
+    color: #fff; 
+}
+
+picture img {
+    width: 100%; 
+}
+
+.buttons {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.reserve, .command {
+    width: fit-content; 
+    padding: 1.5em 3em; 
+    border: 1px solid #ededed; 
+    border-radius: 45px; 
+    text-align: center;
+    margin: .75em 0; 
+}
+
+.reserve:hover, .command:hover {
+    background-color: #baf1cb; 
+    color: #999; 
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.portfolio {
+    position: relative;
+}
+
+.pic-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 0.5em 1.5em;
+    display: none;
+}
+
+.picture-container:hover .pic-hover {
+    display: block;
+    z-index: 1;
+}
+
+.pic-hover:hover {
+    background-color: #000;
+    color: #fff;
+    opacity: 60%;
+}
+
+.picture-container:hover .portfolio-pic {
+    opacity: 50%;;
+}
+
+/***** footer *****/
+.main-footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #ededed;
+    padding: 2em 1.5em 3em 1.5em;
+    width: 100%;
+}
+
+.logo-footer {
+    width: 20%; 
+    height: 20%; 
+    margin-left: auto;
+}
+
+.main-footer a {
+    color: #000;
+}
+
+.main-footer a:hover {
+    color: #999;
+}
+
+
+/********** media query à 940px **********/
+@media screen and (min-width: 940px) {
+    /***** général *****/
+    p {
+        font-size: 1.5em; 
+    }
+
+    /***** header *****/
+    .main-header {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+    }
+
+    .logo-header {
+        width: 20%;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-top: 1em;
+    }
+
+    /***** navbar *****/
+    nav {
+        display: flex;
+        width: 100%;
+    }
+
+    .main-nav {
+        display: flex; 
+        width: 100%;
+    }
+
+    .main-nav a {
+        margin: 0.25em 0.5em;
+    }
+
+    .menu-search {
+        width: 20%;
+        margin-right: 0.5em;
+    }
+
+    /***** main *****/
+    #wrapper {
+        grid-template-columns: 5fr 3fr;
+        grid-gap: 0.5em;
+        grid-template-areas: 
+            "header  header"
+            "nav     nav"
+            "main    planning"
+            "main    adresse"
+            "main    portfolio"
+            "semaine semaine"
+            "footer  footer";
+    }
+
+    .semaine-articles {
+        display: grid;
+        gap: 1.5em;
+        grid-template-columns: 4fr 4fr;
+        grid-template-areas: 'first second';
+    }
+
+    .first {
+        grid-area: first;
+    }
+    .second {
+        grid-area: second;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .reserve, .command {
+        margin: .75em 1.5em;
+    }
+
+    /***** footer *****/
+    .logo-footer {
+        width: 20%;
+        height: 30%;
+        margin-right: 1.5em;
+    }
+
+    .footer-menu {
+        column-count: 3;
+        width: 100%;
+    }
+}
